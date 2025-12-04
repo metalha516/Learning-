@@ -107,5 +107,5 @@ int main(){
     cout<<height(root)<<endl;
     cout<<CountNode(root)<<endl;
     cout<<sum(root)<<endl;
-    cout<<search(root, 4);
+    cout<<search(root, 3);
 }
