@@ -1,7 +1,5 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-
 void heapify(int i, vector<int>&arr, int n){
       if(i >= n) return;
       int left = 2*i +1;
@@ -19,7 +17,6 @@ void heapify(int i, vector<int>&arr, int n){
         heapify(maxIndx, arr, n);
       }
 }
-
 void heapSort(vector<int>&arr, int n){
      for(int i = n/2-1; i>=0; i--){
         heapify(i, arr, n);
@@ -30,8 +27,6 @@ void heapSort(vector<int>&arr, int n){
         heapify(0, arr, i);
      }
 }
-
-
 int main(){
     vector<int> a = {1, 4, 2, 9, 5, 3, 12, 10, 17, 14, 20, 19, 29, 25, 50};
     heapSort(a, a.size());
