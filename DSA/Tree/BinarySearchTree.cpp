@@ -97,7 +97,6 @@ int search(Node* root, int target){
     if(root->left == NULL) return search(root->right, target);
     else
     return search(root->left, target);
-
 }
 
 int main(){
