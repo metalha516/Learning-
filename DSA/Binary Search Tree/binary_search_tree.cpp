@@ -98,19 +98,26 @@ Node* delNode(Node* root, int val){
     }
 }
 
+void preOrder(Node* root){
+    if (root == NULL ){
+        return;
+    }
+    cout<<root->data<<" ";
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
 
 
 
 
 
 int main(){
-     vector<int>values = {1, 4, 2, 6, 2, 8, 14, 9};
+     vector<int>values = {5, 7, 10, 20, 15, 25, 30, 40, 50};
      Node* root = buildTree(values);
-     inOrder(root);
-     cout<<endl;
-     delNode(root, 4);
-     inOrder(root);
-     cout<<endl;
-
+     for(auto i : values){
+        root = insert(root, i);
+     }
      
+     preOrder(root);
 }
