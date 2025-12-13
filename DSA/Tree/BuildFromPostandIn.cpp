@@ -43,7 +43,8 @@ int search(vector<int>arr, int k){
 
 Node* BuildpostNIn(vector<int>&inorder, vector<int>postorder, int &postindx, int left, int right){
     if(left > right) return NULL;
-    Node* root = new Node(postorder[postindx--]); //
+    Node* root = new Node(postorder[postindx]);
+    postindx = postindx-1 ;//
     int inIndx = search(inorder, root->data);
     
     root->right = BuildpostNIn(inorder, postorder, postindx, inIndx+1, right); //
