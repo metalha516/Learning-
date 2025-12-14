@@ -118,6 +118,8 @@ int main(){
      for(auto i : values){
         root = insert(root, i);
      }
-     
+     preOrder(root);
+     cout<<endl;
+     root = delNode(root, 15);
      preOrder(root);
 }
