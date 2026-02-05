@@ -99,7 +99,13 @@ void binaryString(int n, string ans){
 }
 
 
+// You are climbing a staircase. It takes n steps to reach the top.
+// Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
 
+int climbStairs(int n) {
+        if(n==0 || n==1) return 1;
+        return climbStairs(n-1)+climbStairs(n-2);
+    }
 
 void removeDuplicates(string str, string ans, int i, int map[26]){
     if(i == str.size()){
