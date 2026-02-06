@@ -60,7 +60,8 @@ void nQueens(vector<vector<char>>&board, int row){
 
 int main(){
    vector<vector<char>>board;
-   int n = 3;
+   int n;
+   cin>>n;
    for(int i = 0; i<n; i++){
      vector<char>row;
      for(int j = 0; j<n; j++){

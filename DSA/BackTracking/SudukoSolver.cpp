@@ -11,7 +11,7 @@ void print(int board[9][9]){
    }
 }
 
-bool isSafe(int sudoku[9][9], int row, int col, int digit){
+bool isSafe(int sudoku[9][9], int row, int col, char digit){
     //vertical
     for(int i = 0; i<=8; i++){
         if (sudoku[i][col] == digit){
@@ -55,7 +55,7 @@ bool sudokuSolver(int sudoku[9][9], int row, int col){
         return sudokuSolver(sudoku, nextRow, nextCol);
     }
 
-    for(int digit = 1; digit<=9; digit++){
+    for(int digit = '1'; digit<='9'; digit++){
         if(isSafe(sudoku, row, col, digit)){
             sudoku[row][col] = digit;
             if(sudokuSolver(sudoku, nextRow, nextCol)) return true;
@@ -63,4 +63,16 @@ bool sudokuSolver(int sudoku[9][9], int row, int col){
         }
     }
     return false;
+}
+
+
+int main(){
+    int board[9][9];
+    for(int i = 0; i < 9; i++){
+        for(int j = 0; j<9; j++){
+            cin>>board[i][j];
+        }
+    }
+
+
 }
