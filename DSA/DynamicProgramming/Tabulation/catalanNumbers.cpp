@@ -10,6 +10,8 @@ int cat(int n){
             dp[i]+=dp[j]*dp[i-j-1];
         }
     }
+
+    
     return dp[n];
 }
 
