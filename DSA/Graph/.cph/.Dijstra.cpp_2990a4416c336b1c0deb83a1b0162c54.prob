@@ -1,0 +1,1 @@
+{"name":"Local: Dijstra","url":"d:\\Personal Learning\\DSA\\Graph\\Dijstra.cpp","tests":[{"id":1777676684313,"input":"5 7\n0 1 2\n0 3 7\n1 2 8\n1 3 9\n2 3 3\n2 4 4 \n3 4 5","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\Personal Learning\\DSA\\Graph\\Dijstra.cpp","group":"local","local":true}
