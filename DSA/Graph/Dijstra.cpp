@@ -13,7 +13,11 @@ class Graph{
     }
 
     vector<int>ShortestPath(int src){
-        priority_queue<pair<int, int>, vector<pair<int, int>>, greater<pair<int, int>>>pq;
+        priority_queue<
+        pair<int, int>, 
+        vector<pair<int, int>>, 
+        greater<pair<int, int>>
+        >pq;
         vector<int>dist(adjList.size(), INT_MAX);
 
         dist[src] = 0;
