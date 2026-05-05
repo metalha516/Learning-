@@ -19,25 +19,19 @@ class Graph{
         greater<pair<int, int>>
         >pq;
         vector<int>dist(adjList.size(), INT_MAX);
-
         dist[src] = 0;
         pq.emplace(0, src);
-
         while(!pq.empty()){
             auto top = pq.top();
             pq.pop();
-
             int d = top.first;
             int u = top.second;
-
             if(d > dist[u]){
                 continue;
             }
-
             for(auto &node : adjList[u]){
                 int v = node.second;
                 int w = node.first;
-
                 if(dist[u]+w < dist[v]){
                     dist[v] = dist[u]  + w;
                     pq.emplace(dist[v], v);
